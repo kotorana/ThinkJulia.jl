@@ -36,3 +36,18 @@ function testsquareroot(io::IO)
     println(io, abs(mysq - sq))
   end
 end
+
+function evaloop()
+    while true
+        print("input: ")
+        l = readline()
+        if l=="done"
+            break
+        end
+        try
+            println(eval(Meta.parse(l)))
+        catch e
+            println(e)
+        end
+    end
+end
